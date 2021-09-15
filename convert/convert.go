@@ -1,6 +1,9 @@
 package convert
 
-import "strconv"
+import (
+	"fmt"
+	"strconv"
+)
 
 // StrToInt64 /**
 func StrToInt64(s string) (i int64, err error) {
@@ -68,7 +71,12 @@ func Int64ToStr(i int64) string {
 	return strconv.FormatInt(i, 10)
 }
 
-
+// FormatFloat 保留2为小数
+func FormatFloat(n float64)(float64,error){
+	// var n float64
+	n2, err := strconv.ParseFloat(fmt.Sprintf("%.2f", n), 64)
+	return n2, err
+}
 
 
 
