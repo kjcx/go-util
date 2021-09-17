@@ -78,5 +78,7 @@ func FormatFloat(n float64)(float64,error){
 	return n2, err
 }
 
-
+func FloatToString(value float64) string{
+	return  strconv.FormatFloat(value, 'f', -1, 64)
+}
 
